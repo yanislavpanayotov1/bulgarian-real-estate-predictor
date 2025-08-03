@@ -270,9 +270,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📬 Contact
 
-**Yanislav** - [GitHub Profile](https://github.com/yourusername)
+**Yanislav** - [GitHub Profile](https://github.com/yanislavpanayotov1)
 
-**Project Link**: https://github.com/yourusername/bulgarian-real-estate-predictor
+**Project Link**: https://github.com/yanislavpanayotov1/bulgarian-real-estate-predictor
 
 ---
 
