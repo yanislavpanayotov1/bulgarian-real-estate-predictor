@@ -32,7 +32,12 @@ app = FastAPI(
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],  # Frontend URLs
+    allow_origins=[
+        "http://localhost:3000", 
+        "http://127.0.0.1:3000",
+        "https://bulgarian-real-estate-predictor.vercel.app",
+        "https://bulgarian-real-estate-predictor-*.vercel.app"  # Allow all preview deployments
+    ],  # Frontend URLs
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -201,9 +206,9 @@ async def get_properties(
     try:
         # Load property data - try multiple possible paths
         possible_paths = [
-            "../data/raw_properties.csv",
+            "data/raw_properties.csv",
             "data/raw_properties.csv", 
-            "../../data/raw_properties.csv"
+            "data/raw_properties.csv"
         ]
         
         df = None
@@ -289,9 +294,9 @@ async def get_market_stats():
     try:
         # Load property data - try multiple possible paths
         possible_paths = [
-            "../data/raw_properties.csv",
+            "data/raw_properties.csv",
             "data/raw_properties.csv", 
-            "../../data/raw_properties.csv"
+            "data/raw_properties.csv"
         ]
         
         df = None
@@ -362,9 +367,9 @@ async def get_neighborhoods(city: Optional[str] = None):
     try:
         # Load property data - try multiple possible paths
         possible_paths = [
-            "../data/raw_properties.csv",
+            "data/raw_properties.csv",
             "data/raw_properties.csv", 
-            "../../data/raw_properties.csv"
+            "data/raw_properties.csv"
         ]
         
         df = None
